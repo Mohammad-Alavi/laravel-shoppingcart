@@ -12,15 +12,17 @@ class ShoppingCartServiceProvider extends ServiceProvider
 	 *
 	 * @return void
 	 */
-	public function boot()
+	public function boot(): void
 	{
 		$this->publishes([
-			__DIR__ . '/../../config/shoppingcart.php' => config_path('shoppingcart.php'),
+			__DIR__ . 'config/shoppingcart.php' => config_path('shoppingcart.php'),
 		], 'config');
 
 		$this->publishes([
-			__DIR__ . '/../../migrations/' => base_path('/database/migrations'),
+			__DIR__ . 'migrations/' => base_path('/database/migrations'),
 		], 'migrations');
+
+		$this->loadMigrationsFrom(__DIR__ . 'migrations');
 
 		// merge the config and stuff
 		$this->setupConfig();
@@ -29,9 +31,9 @@ class ShoppingCartServiceProvider extends ServiceProvider
 	/**
 	 * Get the Configuration
 	 */
-	private function setupConfig()
+	private function setupConfig(): void
 	{
-		$this->mergeConfigFrom(realpath(__DIR__ . '/../../config/shoppingcart.php'), 'shoppingcart');
+		$this->mergeConfigFrom(__DIR__ . 'config/shoppingcart.php', 'shoppingcart');
 	}
 
 	public function register()
