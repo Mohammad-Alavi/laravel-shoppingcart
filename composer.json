@@ -11,8 +11,8 @@
     ],
     "authors": [
         {
-            "name": "Johannes Schobel",
-            "email": "johannes.schobel@googlemail.com"
+            "name": "Mohammad Alavi",
+            "email": "mohammad.alavi@gmail.com"
         }
     ],
     "require": {
@@ -24,7 +24,7 @@
         "roave/security-advisories": "dev-latest"
     },
     "autoload": {
-        "psr-0": {
+        "psr-4": {
             "MohammadAlavi\\ShoppingCart": "src/"
         }
     },
