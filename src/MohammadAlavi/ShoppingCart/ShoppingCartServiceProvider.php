@@ -1,6 +1,6 @@
 <?php
 
-namespace JohannesSchobel\ShoppingCart;
+namespace MohammadAlavi\ShoppingCart;
 
 use Illuminate\Support\ServiceProvider;
 use MohammadAlavi\ShoppingCart\Models\ShoppingCart;
